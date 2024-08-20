@@ -1,0 +1,106 @@
+.respuesta[data-valor='true']:after{
+    content:'Verdadero';
+}
+
+.respuesta[data-valor='false']:after{
+    content:'Falso';
+}
+
+body{
+    background-color: white;
+    color: #333333;
+    margin: 0;
+    font-family: 'Droid Serif', serif; 
+}
+
+header{
+    max-width: 1080px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 98%;
+    text-align: center;
+
+}
+
+h1{
+    font-size: 36px;
+    font-weight: bold;
+}
+
+h2{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+nav ul{
+    list-style: none;
+}
+
+li a {
+    color: cornflowerblue;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.pregunta{
+    margin-top: 1ex;
+    margin-bottom: 1ex;
+}
+
+.bloque:before {
+    /**Incrementamos a 1 cada pregunta**/
+    counter-increment: sectionCounter;
+    /**Lo mostramos mediante la propiedas content **/
+    content: "Pregunta " counter(sectionCounter);
+}
+
+main{
+    max-width: 1080px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 98%;
+}
+
+section{
+    /**Inicializamos el contador a 0*/
+    counter-reset: sectionCounter;
+    margin-top: 80px;
+}
+
+.idioma{
+    font-style: italic;
+}
+
+img{
+    vertical-align: text-top;
+    width:50px;
+    height:50px;
+    margin-right: 10px;
+    border: 1px solid lightgray;
+}
+
+footer{
+    height: 50px;
+    line-height: 50px; /* <-- this is what you must define */
+    margin-top: 100px;
+    background-color: steelblue;
+    width: 100%;
+    font-size: 80%;
+    color: white;
+    vertical-align: middle;
+    text-align: center;
+}
+
+footer a {
+    color: lightgray
+}
+
+.bloque{
+    background-color: whitesmoke;
+    border: 1px solid lightgray;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+    box-shadow: 6px 6px 3px slategray;
+
+}
